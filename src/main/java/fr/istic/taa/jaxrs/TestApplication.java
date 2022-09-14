@@ -24,6 +24,7 @@ import javax.ws.rs.core.Application;
 import fr.istic.taa.jaxrs.rest.AppointmentResource;
 import fr.istic.taa.jaxrs.rest.PatientResource;
 import fr.istic.taa.jaxrs.rest.ProfessionalResource;
+import fr.istic.taa.jaxrs.rest.SwaggerResource;
 import io.swagger.v3.jaxrs2.integration.resources.OpenApiResource;
 
 public class TestApplication extends Application {
@@ -34,10 +35,11 @@ public class TestApplication extends Application {
 
         final Set<Class<?>> clazzes = new HashSet<Class<?>>();
 
+        clazzes.add(OpenApiResource.class);
         clazzes.add(PatientResource.class);
         clazzes.add(ProfessionalResource.class);
         clazzes.add(AppointmentResource.class);
-        clazzes.add(OpenApiResource.class);
+        clazzes.add(SwaggerResource.class);
         
 
         return clazzes;
